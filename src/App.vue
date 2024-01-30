@@ -21,7 +21,6 @@ import MapComponent from './components/MapComponent.vue';
 import DrawerComponent from './components/DrawerComponent.vue';
 import FloatingButton from './components/FloatingButton.vue';
 import { GeometryType, MapLayer } from './types'; 
- 
 import { ref } from 'vue';
 
 const isDrawerOpen = ref(false);
