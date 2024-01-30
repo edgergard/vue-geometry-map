@@ -1,11 +1,14 @@
 {
   "name": "vue-map-geometry",
-  "private": true,
+  "private": false,
+  "homepage": "https://edgergard.github.io/vue-geometry-map",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "tsc && vite build --base=/vue-geometry-map/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue src --report-unused-disable-directives --max-warnings 0"
   },
@@ -13,6 +16,7 @@
     "@heroicons/vue": "^2.1.1",
     "@turf/turf": "^6.5.0",
     "@vue-hero-icons/outline": "^1.7.2",
+    "gh-pages": "^6.1.1",
     "maplibre-gl": "^3.6.2",
     "tailwind": "^4.0.0",
     "v-tooltip": "^2.1.3",
